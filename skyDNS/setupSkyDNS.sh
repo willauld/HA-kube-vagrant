@@ -21,7 +21,7 @@ kubectl --namespace=kube-system get pods
 
 
 # should push this through the load balancer TODO
-curl -v --cacert ~/.kube/ca.pem -s https://${SERVER_IP}:2379/v2/keys/atomic.io/network/subnets | python -mjson.tool | grep -E "\{|\}|key|value"
+#curl -v --cacert ~/.kube/ca.pem -s https://${SERVER_IP}:2379/v2/keys/atomic.io/network/subnets | python -mjson.tool | grep -E "\{|\}|key|value"
 
 #curl --cacert /path/to/ca.crt https://127.0.0.1:2379/v2/keys/foo -XPUT -d value=bar -v
 

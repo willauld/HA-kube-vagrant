@@ -52,11 +52,17 @@ kubectl get nodes
 echo "" #just add a blank line
 
 EOD
+
 chmod +x kubectl_remote_config.sh
+chgrp vagrant kubectl_remote_config.sh
+chown vagrant kubectl_remote_config.sh
 
 # copy post cluster bring up test and setup scripts
 cp -v /vagrant/mySQL/*.sh .
 cat /vagrant/skyDNS/setupSkyDNS.sh | sudo sed -e s/SERVER_IP_VAL/${KUBERNETES_LB_IP}/ > ./setupSkyDNS.sh
+chmod +x setupSkyDNS.sh
+chgrp vagrant setupMySQL.sh testMySQL.sh setupSkyDNS.sh
+chown vagrant setupMySQL.sh testMySQL.sh setupSkyDNS.sh
 
 ## Move to /vagrant
 
