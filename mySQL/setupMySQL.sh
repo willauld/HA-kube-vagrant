@@ -18,13 +18,13 @@ kubectl create -f mysql.yaml
 echo kubectl get pods
 kubectl get pods
 
-cp /vagrant/mySQL/mysql-service.yaml mysql-service.yaml
+cp /vagrant/mySQL/mysql-service.yaml template-mysql-service.yaml
 
 ####
 #### Need to modify the IP in the above yaml file
 ####
 POD_NODE_IP=`kubectl describe pod mysql | grep Node | awk -F "/" '{ print $2 }'`
-sed -i s/POD_NODE_IP/$POD_NODE_IP/  mysql-service.yaml
+sed s/POD_NODE_IP/$POD_NODE_IP/ template-mysql-service.yaml > mysql-service.yaml
 
 echo kubectl create -f mysql-service.yaml
 kubectl create -f mysql-service.yaml
