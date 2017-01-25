@@ -1,0 +1,8 @@
+.vagrant
+archieve
+downloads
+TODO
+rebuild_node.sh
+doOnHostAfterControllerAndWorkers.sh
+curlKube.sh
+
