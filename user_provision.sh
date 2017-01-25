@@ -3,7 +3,7 @@
 ####
 echo Provisioning the USER at `pwd`
 ####
-mkdir -p downloads
+mkdir -p /vagrant/downloads
 
 FIRST_CONTROLLER=$1
 KUBERNETES_LB_IP=$2

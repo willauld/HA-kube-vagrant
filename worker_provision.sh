@@ -4,7 +4,7 @@
 echo "**** Provisioning worker node ****"
 ####
 
-mkdir -p downloads
+mkdir -p /vagrant/downloads
 
 INTERNAL_IP=$1
 FIRST_CONTLR_INDX=$2

@@ -2,7 +2,7 @@
 
 set -x 
 
-mkdir -p downloads
+mkdir -p /vagrant/downloads
 
 INTERNAL_IP=$1
 SERVER_NUM=$2
