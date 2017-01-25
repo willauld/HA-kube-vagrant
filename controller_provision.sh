@@ -2,6 +2,8 @@
 
 set -x 
 
+mkdir -p downloads
+
 INTERNAL_IP=$1
 SERVER_NUM=$2
 FIRST_CONTLR_INDX=$3
