@@ -260,9 +260,8 @@ Documentation=https://github.com/GoogleCloudPlatform/kubernetes
 ExecStart=/usr/bin/kube-proxy \\
   --master=https://${ARRAY_ADDR[1]}:6443 \\
   --kubeconfig=/var/lib/kubelet/kubeconfig \\
-  --proxy-mode=iptables \\
+  --proxy-mode=userspace \\
   --v=2
-
 Restart=on-failure
 RestartSec=5
 
