@@ -30,6 +30,12 @@ LB_IP=$BASE_IP_STR$LB_INDEX
 echo "**** LoadBalancer IP: $LB_IP              ****"
 echo "**** Controller endpoints: ${ARRAY_ADDR[1]},${ARRAY_ADDR[2]},${ARRAY_ADDR[3]} ****"
 
+####
+echo Setting the correct IP address in /etc/hosts
+####
+
+echo sudo sed s/127\.0\.0\.1/$INTERNAL_IP/ -i /etc/hosts
+sudo sed s/127\.0\.0\.1/$INTERNAL_IP/ -i /etc/hosts
 
 cd /vagrant
 sudo mkdir -p /var/lib/kubernetes

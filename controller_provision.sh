@@ -26,6 +26,13 @@ done
 
 echo $0 provisioning server $SERVER_NUM at $INTERNAL_IP
 
+####
+echo Setting the correct IP address in /etc/hosts
+####
+
+echo sudo sed s/127\.0\.0\.1/$INTERNAL_IP/ -i /etc/hosts
+sudo sed s/127\.0\.0\.1/$INTERNAL_IP/ -i /etc/hosts
+
 # Do this work in /vagrant
 cd /vagrant
 

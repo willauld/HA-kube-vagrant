@@ -61,7 +61,6 @@ Vagrant.configure(2) do |config|
         else # "kubeNode5", "kubeNode6", ...
           puts "**** USE SCRIPT FOR Worker nodes  #{machine_ip} *****"
           loadbalancerIndx = first_controller + number_controllers
-          puts "**** LoadbalancerIndx:  #{loadbalancerIndx} *****"
           kubeNode.vm.provision :shell, 
             path: "worker_provision.sh",
             :args => "#{machine_ip} #{first_controller} #{number_controllers} #{base_ip_str} #{loadbalancerIndx}"
